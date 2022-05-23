@@ -71,7 +71,6 @@ export class TicketsComponent implements OnInit {
             break;
           }
         }
-        /// search done
 
         if (!checker) {
           return false;
