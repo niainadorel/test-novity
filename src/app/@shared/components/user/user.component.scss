@@ -1,0 +1,20 @@
+.user-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  .title{
+    font-weight: normal;
+    font-size: 1em;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+.flex-reverse{
+  flex-direction: row-reverse;
+}

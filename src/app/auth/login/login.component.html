@@ -1,0 +1,39 @@
+<div class="flex flex-centered h-full h-screen main-container">
+  <div class="light-card">
+    <div class="card-header text-center mb-6">
+      <div class="flex flex-centered mb-8">
+        <div class="logo"></div>
+      </div>
+      <h1 class="mb-0">Log In to Dashboard</h1>
+      <p class="text-mutted">Enter your email and password below</p>
+    </div>
+
+    <form class="text-mutted" [formGroup]="loginForm" (ngSubmit)="submitForm()">
+      <div class="form-field my-2">
+        <label for="">Email</label>
+        <div class="input-container">
+          <input type="text" placeholder="Email address" formControlName="email">
+        </div>
+        <div class="form-error" *ngIf="f['email'].touched && f['email'].errors?.required">Email is required</div>
+        <div class="form-error" *ngIf="f['email'].touched && f['email'].errors?.email">Enter a valid email</div>
+      </div>
+
+      <div class="form-field my-2">
+        <div class="flex space-between">
+          <label for="">Password</label>
+          <a class="text-mutted text-sm">Forgot password?</a>
+        </div>
+        <div class="input-container">
+          <div class="prefix no-border" (click)="showPassword = !showPassword"><i class="fas text-mutted" [class.fa-eye]="showPassword" [class.fa-eye-slash]="!showPassword"></i></div>
+          <input [type]="showPassword ? 'text' : 'password'" placeholder="password" formControlName="password">
+        </div>
+        <div class="form-error" *ngIf="f['password'].touched && f['password'].errors">Password is required</div>
+      </div>
+      <div class="text-danger my-2" *ngIf="loginError">{{loginError}}</div>
+
+      <button class="btn btn-primary w-full text-center" [disabled]="!loginForm.valid" appLoading [loading]="loginLoading" loadingContainerClass="bg-primary" [size]="25">Log in</button>
+    </form>
+
+    <p class="text-center text-mutted">Don't have an account? <a class="text-primary">Sign up</a></p>
+  </div>
+</div>

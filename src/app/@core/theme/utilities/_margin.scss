@@ -1,0 +1,28 @@
+@for $i from 0 to 12 {
+  .m-#{$i} {
+    margin: #{$i * $margin-base}px;
+  }
+  .mx-#{$i} {
+    margin-left: #{$i * $margin-base}px;
+    margin-right: #{$i * $margin-base}px;
+  }
+  .my-#{$i} {
+    margin-top: #{$i * $margin-base}px;
+    margin-bottom: #{$i * $margin-base}px;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i * $margin-base}px;
+  }
+  .mb-#{$i} {
+    margin-bottom: #{$i * $margin-base}px;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i * $margin-base}px;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i * $margin-base}px;
+  }
+}
+.ml-auto{
+  margin-left: auto;
+}

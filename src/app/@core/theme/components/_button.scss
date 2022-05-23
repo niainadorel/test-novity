@@ -1,0 +1,50 @@
+@import './../base/variables';
+
+.btn {
+  line-height: 40px;
+  padding: 0 1em;
+  background: none;
+  border: 1px solid $dark-200;
+  border-radius: 0.5em;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:disabled{
+    background: $grey;
+    border: $grey;
+    cursor: not-allowed;
+  }
+}
+
+.chip {
+  padding: 0 1em;
+  border: none;
+  border-radius: 11px;
+  line-height: 22px;
+  font-size: 10px;
+}
+
+.btn-primary, .chip-primary {
+  background-color: $primary;
+  color: $light;
+  border-color: $primary;
+}
+
+.btn-success, .chip-success {
+  background-color: $success;
+  color: $light;
+  border-color: $success;
+}
+
+.btn-danger, .chip-danger {
+  background-color: $danger;
+  color: $light;
+  border-color: $danger;
+}
+
+.btn-danger, .chip-warn {
+  background-color: $warn;
+  color: $light;
+  border-color: $warn;
+}
+

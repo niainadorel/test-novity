@@ -1,0 +1,45 @@
+@import './../base/variables';
+
+.form-field {
+  label {
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+  }
+  .input-container {
+    background: $grey-100;
+    position: relative;
+    border: 1px solid $grey-200;
+    border-radius: 0.5em;
+    overflow: hidden;
+  }
+  input {
+    background: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    padding: 0 12px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 0.5em;
+  }
+  .prefix, .suffix{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 40px;
+  }
+  .prefix{
+    top: 0;
+    right: 0;
+  }
+  .form-error{
+    color: $danger;
+    margin-top: 4px;
+  }
+}

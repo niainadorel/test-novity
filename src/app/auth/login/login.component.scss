@@ -1,0 +1,15 @@
+@import '../../@core/theme/base/variables';
+
+.main-container {
+  background-color: $dark-200;
+}
+.light-card {
+  padding: 3em 2em;
+  background: $light;
+  border-radius: 0.75em;
+  min-width: 375px;
+}
+
+form button {
+  box-shadow: $light-shadow-100;
+}

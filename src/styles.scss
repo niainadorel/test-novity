@@ -1,1 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~boxicons/css/boxicons.min.css';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import './app/@core/theme/global.scss';
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+
+  &::after{
+    content: '';
+    display: block;
+    width: 37%;
+    height: 40%;
+    background-color: $light;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    transform: translateX(5%);
+  }
+}
+
+
+.table-container {
+  background-color: $light;
+  border-radius: 0.5em;
+  border: 1px solid #e9e9f2;
+
+  .title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .table-head {
+    padding: 1.5em;
+  }
+
+  .table-head-actions {
+    i {
+      width: 20px;
+      color: $grey-600;
+    }
+  }
+}
+
+
+.datatable-header-cell-template-wrap {
+  padding: 0 1.5em;
+  box-sizing: border-box;
+  line-height: 35px;
+  font-weight: bold;
+  color: #a1a4b5;
+}
+
+.empty-row {
+  padding: 0 1em;
+}
+datatable-body-cell{
+  padding: 1em 1.5em;
+}
+datatable-body-row{
+  border-top: 1px solid #ececec;
+}
+.datatable-body-cell-label{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+datatable-footer{
+  border-top: 1px solid #ececec;
+  padding: 0 1.5em;
+}
+.pagination-items {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+
+  select {
+    border: none;
+    outline: none;
+  }
+}

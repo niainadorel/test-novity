@@ -1,0 +1,23 @@
+@import './../../../@core/theme/base/variables';
+
+.navbar-container{
+  padding: 1.5em 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  font-size: 1.4em;
+}
+.nav-items i{
+  color: $grey-600;
+}
+.horizontal-divider {
+  height: 40px;
+  width: 1px;
+  background: #e3e3e3;
+  margin: 0 12px;
+}
+.user-container{
+  min-width: 150px;
+}

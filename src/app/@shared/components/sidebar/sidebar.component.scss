@@ -1,0 +1,56 @@
+@import './../../../@core/theme/base/variables';
+
+.sidebar-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 250px;
+  background: $dark-200;
+  height: 100vh;
+  padding: 2em 0;
+  box-sizing: border-box;
+}
+.logo-container {
+  gap: 10px;
+  padding: 0 2em;
+  .logo{
+    width: 30px;
+    height: 30px;
+  }
+
+  b{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: $grey-300;
+  }
+}
+.menu-items button {
+  width: 100%;
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
+  color: $grey-400;
+  border: none;
+  border-radius: 0;
+  line-height: 45px;
+  border-left: 2px solid transparent;
+
+
+  i {
+    width: 40px;
+    text-align: left;
+  }
+
+  &.active {
+    color: $light;
+    background: $grey-500;
+    border-left: 2px solid $light;
+  }
+}
+
+.divider {
+  height: 1px;
+  background-color: $grey-500;
+  margin: 16px 0;
+}

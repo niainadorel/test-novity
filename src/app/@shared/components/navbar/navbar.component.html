@@ -1,0 +1,20 @@
+<div class="navbar-container">
+  <b class="title">
+    {{title}}
+  </b>
+  <div>
+    <div class="flex nav-items">
+      <button class="btn no-border">
+        <i class="fas fa-search"></i>
+      </button>
+      <button class="btn no-border">
+        <i class="fas fa-bell"></i>
+      </button>
+
+      <div class="horizontal-divider"></div>
+      <div class="user-container">
+        <app-user title="John Doe" picture="assets/user.jpg" [reverse]="true"></app-user>
+      </div>
+    </div>
+  </div>
+</div>

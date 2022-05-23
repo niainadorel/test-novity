@@ -1,0 +1,19 @@
+<div class="sidebar-container">
+  <div class="flex items-center logo-container mb-6">
+    <div class="logo"></div>
+    <b>Dashboard</b>
+  </div>
+  <div class="menu-items">
+    <button class="btn" *ngFor="let menu of principaleMenus"  [routerLink]="menu.link" routerLinkActive="active">
+      <i [class]="menu.icon"></i>
+      <span>{{menu.title}}</span>
+    </button>
+
+    <div class="divider"></div>
+
+    <button class="btn" *ngFor="let menu of settingsMenu"  [routerLink]="menu.link" routerLinkActive="active">
+      <i [class]="menu.icon"></i>
+      <span>{{menu.title}}</span>
+    </button>
+  </div>
+</div>
