@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { Store, StoreModule } from '@ngrx/store';
 
 import { AuthGuard } from './auth.guard';
 
@@ -6,7 +7,9 @@ describe('AuthGuard', () => {
   let guard: AuthGuard;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      imports: [StoreModule.forRoot({})]
+    });
     guard = TestBed.inject(AuthGuard);
   });
 

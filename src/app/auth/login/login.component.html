@@ -4,7 +4,7 @@
       <div class="flex flex-centered mb-8">
         <div class="logo"></div>
       </div>
-      <h1 class="mb-0">Log In to Dashboard</h1>
+      <h1 class="mb-0" id="login-title">Log In to Dashboard</h1>
       <p class="text-mutted">Enter your email and password below</p>
     </div>
 
@@ -14,8 +14,8 @@
         <div class="input-container">
           <input type="text" placeholder="Email address" formControlName="email">
         </div>
-        <div class="form-error" *ngIf="f['email'].touched && f['email'].errors?.required">Email is required</div>
-        <div class="form-error" *ngIf="f['email'].touched && f['email'].errors?.email">Enter a valid email</div>
+        <div class="form-error" *ngIf="f['email'].touched && f['email'].errors?.required" id="email-required-error">Email is required</div>
+        <div class="form-error" *ngIf="f['email'].touched && f['email'].errors?.email" id="email-error">Enter a valid email</div>
       </div>
 
       <div class="form-field my-2">
@@ -27,7 +27,7 @@
           <div class="prefix no-border" (click)="showPassword = !showPassword"><i class="fas text-mutted" [class.fa-eye]="showPassword" [class.fa-eye-slash]="!showPassword"></i></div>
           <input [type]="showPassword ? 'text' : 'password'" placeholder="password" formControlName="password">
         </div>
-        <div class="form-error" *ngIf="f['password'].touched && f['password'].errors">Password is required</div>
+        <div class="form-error" *ngIf="f['password'].touched && f['password'].errors" id="password-required-error">Password is required</div>
       </div>
       <div class="text-danger my-2" *ngIf="loginError">{{loginError}}</div>
 
