@@ -20,4 +20,37 @@
 }
 .user-container{
   min-width: 150px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+
+  .user-menu {
+    border-radius: 0.5em;
+    overflow: hidden;
+    position: absolute;
+    background: white;
+    min-width: 150px;
+    right: 2px;
+    z-index: 99;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    opacity: 0;
+    transition: 3s top ease-in;
+    top: 0px;
+    display: none;
+    
+    &.show {
+      top: 55px;
+      display: block;
+      opacity: 1;
+    }
+
+    button {
+      text-align: left;
+
+      i{
+        width: 25px;
+      }
+    }
+  }
 }
+

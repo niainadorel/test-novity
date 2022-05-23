@@ -6,12 +6,15 @@ import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UserComponent } from './components/user/user.component';
 import { PriorityPipe } from './pipes/priority.pipe';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { DateDiffPipe } from './pipes/date-diff.pipe';
 
 const SHARED = [
   SidebarComponent,
   LoadingDirective,
   NavbarComponent,
   UserComponent,
+  DateDiffPipe,
   PriorityPipe
 ]
 
@@ -22,6 +25,7 @@ const SHARED = [
   imports: [
     CommonModule,
     RouterModule,
+    SweetAlert2Module.forRoot(),
   ],
   exports: [
     ...SHARED

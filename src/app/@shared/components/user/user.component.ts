@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user',
@@ -9,10 +9,26 @@ export class UserComponent implements OnInit {
   @Input() title!: string;
   @Input() subtitle!: string;
   @Input() picture!: string;
-  @Input() reverse!: boolean
+  @Input() reverse!: boolean;
+
+  @Output() showMenu = new EventEmitter(false);
+  private _showMenu = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onShowMenu() {
+    this._showMenu = !this._showMenu;
+    this.showMenu.emit(this._showMenu);
+  }
+
+  hideMenu() {
+    if (this._showMenu) {
+      setTimeout(() => {
+        this._showMenu = false;
+        this.showMenu.emit(this._showMenu);
+      }, 250)
+    }
+  }
 }

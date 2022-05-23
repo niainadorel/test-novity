@@ -9,3 +9,21 @@
 .table-head .title{
   line-height: 30px;
 }
+.filter-input {
+  height: 40px;
+  border: 1px solid $grey-700;
+  border-radius: 0.5em;
+  outline: none;
+  width: 0px;
+  transition: .3s width ease-in;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0;
+  opacity: 0;
+  &.show{
+    width: 250px;
+    padding: 0 1em;
+    opacity: 1;
+  }
+}
+

@@ -30,7 +30,7 @@
 .table-container {
   background-color: $light;
   border-radius: 0.5em;
-  border: 1px solid #e9e9f2;
+  border: 1px solid $grey-700;
 
   .title {
     font-size: 1.2em;
@@ -55,7 +55,7 @@
   box-sizing: border-box;
   line-height: 35px;
   font-weight: bold;
-  color: #a1a4b5;
+  color: $grey-900;
 }
 
 .empty-row {
@@ -65,7 +65,7 @@ datatable-body-cell{
   padding: 1em 1.5em;
 }
 datatable-body-row{
-  border-top: 1px solid #ececec;
+  border-top: 1px solid $grey-800;
 }
 .datatable-body-cell-label{
   height: 100%;
@@ -73,7 +73,7 @@ datatable-body-row{
   align-items: center;
 }
 datatable-footer{
-  border-top: 1px solid #ececec;
+  border-top: 1px solid $grey-800;
   padding: 0 1.5em;
 }
 .pagination-items {
@@ -87,4 +87,8 @@ datatable-footer{
     border: none;
     outline: none;
   }
+}
+
+.swal2-styled.swal2-confirm{
+  background-color: $primary!important;
 }

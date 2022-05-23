@@ -5,6 +5,7 @@ export interface AccountManagerEntry {
   name: string;
   email: string;
   password?: string;
+  picture?: string;
 }
 
 export interface AccountManagerState extends EntityState<AccountManagerEntry> {

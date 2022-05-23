@@ -12,7 +12,8 @@ export class AccountManagerService {
       _id: '1234',
       name: 'John Doe',
       email: 'admin@admin.com',
-      password: 'admin'
+      password: 'admin',
+      picture: 'assets/user.jpg'
     }
   ]
   constructor() { }

@@ -7,14 +7,27 @@
       <button class="btn no-border">
         <i class="fas fa-search"></i>
       </button>
-      <button class="btn no-border">
+      <button class="btn no-border" (click)="showNotifications()">
         <i class="fas fa-bell"></i>
       </button>
 
       <div class="horizontal-divider"></div>
       <div class="user-container">
-        <app-user title="John Doe" picture="assets/user.jpg" [reverse]="true"></app-user>
+        <app-user [title]="user?.name || ''" [picture]="user?.picture || ''" [reverse]="true" (showMenu)="onShowMenu($event)"></app-user>
+        <div class="user-menu" [class.show]="showUserMenu">
+          <button class="btn no-border w-full" (click)="confirmLogout()">
+            <i class="fa-solid fa-right-from-bracket"></i> Log out
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<swal #confirmSwal title="Are you sure ?" icon="question" [showCancelButton]="true" [reverseButtons]="true"
+    confirmButtonText="Yes" cancelButtonText="No" (confirm)="logout()">
+</swal>
+
+<swal #notificationsSwal title="No notification yet" icon="warning"
+    confirmButtonText="Ok">
+</swal>

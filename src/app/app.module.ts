@@ -6,6 +6,7 @@ import { AccountManagerStoreModule } from './@core/store/account-manager/account
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
+    SweetAlert2Module.forRoot(),
     AccountManagerStoreModule
   ],
   providers: [],

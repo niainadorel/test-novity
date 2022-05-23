@@ -2,16 +2,17 @@
   <div class="table-container">
     <div class="table-head flex space-between">
       <b class="title">All tickets</b>
-      <div class="table-head-actions">
-        <button class="no-border btn">
+      <div class="table-head-actions ml-auto">
+        <button class="no-border btn" (click)="sortData()">
           <i class="fas fa-arrow-up-wide-short"></i>
           Sort
         </button>
-        <button class="no-border btn">
+        <button class="no-border btn" (click)="showFilter=!showFilter">
           <i class="fas fa-filter"></i>
           Filter
         </button>
       </div>
+      <input type="text" placeholder="Type to filter" class="filter-input" [class.show]="showFilter" (keydown)="search($event)">
     </div>
     <ngx-datatable #ticketsTable class="material light-shadow" [rows]="filteredRows" [columnMode]="'force'"
       [headerHeight]="35" [footerHeight]="60" [rowHeight]="80"
@@ -20,7 +21,7 @@
       <!-- Details  -->
       <ngx-datatable-column name="Ticket details" prop="title" [width]="400">
         <ng-template let-row="row" ngx-datatable-cell-template let-value="value">
-          <app-user [title]="value" subtitle="{{row['updatedAt'] | date:'dd-MM-yyyy'}}" [picture]="'assets/user.jpg'"></app-user>
+          <app-user [title]="value" subtitle="{{row['updatedAt'] | dateDiff}}" [picture]="'assets/user.jpg'"></app-user>
         </ng-template>
       </ngx-datatable-column>
 

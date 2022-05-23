@@ -1,4 +1,4 @@
-<div class="user-container" [class.flex-reverse]="reverse">
+<div class="user-container" [class.flex-reverse]="reverse" (click)="onShowMenu()" (blur)="hideMenu()" tabindex="0">
   <img [src]="picture" alt="">
   <div>
     <div class="title">{{title}}</div>
