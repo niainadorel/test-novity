@@ -17,3 +17,5 @@ Use of NgRx for state management
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Heroku link  
+https://niainatest.herokuapp.com/
